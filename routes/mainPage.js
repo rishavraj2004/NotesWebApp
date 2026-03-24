@@ -9,4 +9,7 @@ const notesController = require('../controllers/notes')
 
 router.get('/', notesController.getNotes)
 
+router.get('/post-note', notesController.postNote)
+
+
 module.exports = router;
