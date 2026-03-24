@@ -5,10 +5,8 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    res.render('landing', {
-        title: "My Notes"
-    });
-})
+const notesController = require('../controllers/notes')
+
+router.get('/', notesController.getNotes)
 
 module.exports = router;
