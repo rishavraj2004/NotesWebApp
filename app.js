@@ -7,9 +7,11 @@ const app = express()
 
 const mainPageRoutes = require('./routes/mainPage');
 
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', mainPageRoutes);
 
 app.use((req, res, next) => {
