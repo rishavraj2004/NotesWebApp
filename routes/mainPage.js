@@ -11,7 +11,7 @@ router.get('/', notesController.getNotes)
 
 router.get('/post-note', notesController.postNote)
 router.post('/post-note', notesController.postAddNote)
-router.get('/delete-note', notesController.postDeleteNote);
+router.post('/delete-note', notesController.postDeleteNote);
 
 
 

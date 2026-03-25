@@ -20,6 +20,9 @@
         </nav>
     </header>
 
+
+
+
     <section class="notes">
 
         <% if (notes && notes.length> 0) { %>
@@ -41,6 +44,10 @@
                 <% }) %>
 
                     <% } else { %>
+                        <div class="note-card">
+                            <h3>Welcome Note</h3>
+                            <p>Welcome To Notes web :)</p>
+                        </div>
 
                         <p class="empty-msg">No notes yet. Create one!</p>
 
