@@ -8,11 +8,14 @@ const errorController = require('./controllers/error')
 const mainPageRoutes = require('./routes/mainPage');
 
 
+app.use(express.urlencoded({ extended: true }));
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', mainPageRoutes);
+app.use(mainPageRoutes)
 
 app.use(errorController.get404)
 
